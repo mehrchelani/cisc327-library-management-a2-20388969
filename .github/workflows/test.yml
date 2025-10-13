@@ -23,18 +23,6 @@ jobs:
           pip install -r requirements.txt
           pip install pytest-cov
 
-      - name: Add repo to PYTHONPATH
-        run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
-
-      - name: Initialize and seed database
-        run: |
-          python - <<'PY'
-          from database import init_db, seed_db
-          init_db()
-          seed_db()
-          print("Database initialized and seeded.")
-          PY
-
       - name: Run tests with coverage
         run: |
-          pytest --cov=. --cov-report=xml tests/
+          pytest --cov=library_service --cov-report=xml tests/
