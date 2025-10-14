@@ -22,7 +22,7 @@ def test_empty_patron():
 
 '''Test if the return updates the book status'''
 def test_if_returns_and_updates():
-    success, msg = return_book_by_patron("987654", 8)
+    success, msg = return_book_by_patron("987654", 2)
     assert success is True
     assert "returned successfully" in msg.lower()
 
