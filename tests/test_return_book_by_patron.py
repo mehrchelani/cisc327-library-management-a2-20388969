@@ -1,6 +1,6 @@
 # Requirement 4
 import pytest
-from library_service import (
+from services.library_service import (
     return_book_by_patron
 )
 '''Test to see if a book id and patron id correctly returns a book'''

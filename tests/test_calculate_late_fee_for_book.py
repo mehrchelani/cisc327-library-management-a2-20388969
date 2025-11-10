@@ -1,6 +1,6 @@
 # Requirement 5
 import pytest
-from library_service import (
+from services.library_service import (
     calculate_late_fee_for_book
 )
 from datetime import datetime, timedelta
@@ -20,7 +20,7 @@ def patch_borrow_records(monkeypatch):
         }
         return mapping.get(patron_id, [])
 
-    import library_service
+    import services.library_service as library_service
     monkeypatch.setattr(
         library_service, "get_patron_borrowed_books", fake_get_patron_borrowed_books
     )
