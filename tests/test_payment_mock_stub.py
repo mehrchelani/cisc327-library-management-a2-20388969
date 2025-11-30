@@ -79,7 +79,6 @@ def test_exceeds_fifteen():
     assert success is False
     assert message == "Refund amount exceeds maximum late fee."
     gateway.refund_payment.assert_not_called()
-    
 
 
 

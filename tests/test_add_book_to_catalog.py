@@ -52,4 +52,3 @@ def test_negative_copies():
     success, message = add_book_to_catalog("Test Book", "Test Author","1234567890123", copies)
     assert success is False
     assert "total copies must be a positive integer" in message.lower()
-    
